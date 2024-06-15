@@ -9,7 +9,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("/check_session").then((response) => {
+    fetch("http://localhost:5555/check_session").then((response) => {
       if (response.ok) {
         response.json().then((user) => setUser(user));
       }

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Header({ user, onLogout }) {
   function handleLogout() {
-    fetch("/logout", {
+    fetch("http://localhost:5555/logout", {
       method: "DELETE",
     }).then(() => onLogout());
   }
